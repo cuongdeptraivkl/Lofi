@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <title>Hoan Xoai Lofi</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="icon" href="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/295374195_781580993040406_229230968445196371_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4xmqFs2YaL0AX93SqU6&tn=D7p54ZetywhaBBwA&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8kpNXU-xrqTVlUGmdOW26IwmqyEZiMkPX_0M6DhcOg5w&oe=63148D10">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400&family=DynaPuff:wght@300;400&family=Inter:wght@200;600&family=Lemonada:wght@600&family=Nunito&family=Roboto:ital,wght@0,300;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <!-- <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+        content="Interact with wonderful original artworks to create a custom background music loop. Enjoy our suite of studying & time tracking tools." />
+    <link href="/static/css/main.15dbc5f7.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="background">
+                <video class="background_video" preload="auto" playsinline autoplay="true" loop="loop" muted volume="0">
+                    <source src="src/video/Honolulu+Balcony+Day.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="background">
+                <video id="dark" class="background_video" preload="auto" playsinline autoplay="true" loop="loop" muted
+                    volume="0">
+                    <source src="src/video/Honolulu+Balcony+Night.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="background">
+                <video id="dark" class="background_video" preload="auto" playsinline autoplay="true" loop="loop" muted
+                    volume="0">
+                    <source src="src/video/Honolulu+Balcony+Rainy+Day.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="background">
+                <video id="dark" class="background_video" preload="auto" playsinline autoplay="true" loop="loop" muted
+                    volume="0">
+                    <source src="src/video/Honolulu+Balcony+Rainy+Night.mp4" type="video/mp4">
+                </video>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+
+                <div class="top">
+                    <div class="left_top">
+                        <div class="img_logo">
+                            <img src="src/img/logo-black.png" alt="">
+                        </div>
+                        <div class="img_logo">
+                            <img src="src/img/logo-white.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right_top">
+                        <div id="current_time" onclick="closedate()"></div>
+                        <div id="check_toggle"   class="toggle">
+                           <i   class='bx bx-sun'></i>
+                        </div>
+                        <div class="ads_right_top">
+                            🚀<marquee> Hoan Xoai Lofi- Design By Manh Cuong</marquee>
+                        </div>
+                        <div class="sing_up">
+                            <button href="" onclick="signup()">Sing Up</a>
+                        </div>
+                        <div class="icon_right_top">
+                            <i onclick="closeShare()" class='bx bx-share-alt'></i>
+                            <i id="btn_volume"><i class='bx bx-volume-full'></i></i>
+                            <i id="btn_full"><i class='bx bx-fullscreen'></i></i>
+                            <i id="btn_menu" class='bx bx-menu'></i>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mid">
+                    <div class="menu_mid">
+
+                        <div onclick="mixer_mid()" class="mixer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none"
+                                class="injected-svg" data-src="/icons/new/menu-mixer.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M14.1909 0C12.5311 0 11.1411 1.15543 10.7814 2.70586L0.954551 2.70586C0.42737 2.70586 6.19543e-06 3.13322 6.19543e-06 3.6604C6.19543e-06 4.18758 0.427371 4.61495 0.954551 4.61495H10.8722C11.3378 6.00129 12.6477 7 14.1909 7C15.7341 7 17.044 6.00129 17.5096 4.61495H20.0455C20.5726 4.61495 21 4.18758 21 3.6604C21 3.13322 20.5726 2.70586 20.0455 2.70586H17.6004C17.2407 1.15543 15.8508 0 14.1909 0Z"
+                                    fill="#363636"></path>
+                                <path
+                                    d="M5.28182 7C3.67197 7 2.31598 8.08687 1.90759 9.56685L0.92954 9.59249C0.40254 9.6063 -0.0134795 10.0447 0.000334292 10.5717C0.014148 11.0987 0.452564 11.5147 0.979564 11.5009L1.91979 11.4763C2.34241 12.9342 3.68765 14 5.28182 14C6.86684 14 8.20578 12.9464 8.63648 11.5013H20.0455C20.5726 11.5013 21 11.074 21 10.5468C21 10.0196 20.5726 9.59224 20.0455 9.59224H8.66295C8.26314 8.09932 6.90086 7 5.28182 7Z"
+                                    fill="#363636"></path>
+                                <path
+                                    d="M14.1909 14C12.6133 14 11.2794 15.0438 10.8423 16.4785H0.954551C0.427371 16.4785 6.80232e-06 16.9058 6.80232e-06 17.433C6.80232e-06 17.9602 0.427371 18.3876 0.954551 18.3876H10.8044C11.1973 19.8908 12.5646 21 14.1909 21C15.8172 21 17.1845 19.8908 17.5774 18.3875H20.0455C20.5726 18.3875 21 17.9602 21 17.433C21 16.9058 20.5726 16.4785 20.0455 16.4785H17.5395C17.1024 15.0438 15.7685 14 14.1909 14Z"
+                                    fill="#363636"></path>
+                            </svg>
+                            <span>mixer</span>
+                            <div class="mixer_fixed_content">
+                                <div class="text_logo_mixer">
+                                    <p>Hoan Xoai Lofi</p>
+                                    <p><img src="src/img/logo-white - Copy.png" width="60px" alt=""></p>
+                                </div>
+                                <div class="option_music_mixer_fixed">
+                                    <div  class="item_option mixi">
+                                        <i class='bx bxs-moon bx-tada bx-flip-horizontal'></i>
+                                        <p> Mixi radio</p>
+                                        <audio preload="auto"  autoplay="true" loop="loop"  id="mixiaudio" src="./src/audio/mixiradio2.mp3"></audio>
+                                    </div>
+                                    <div  class="bolero item_option">
+                                        <i class='bx bxl-java bx-tada bx-flip-horizontal'></i>
+                                        <p>Bolero lofi</p>
+                                        <audio preload="auto"  autoplay="true" loop="loop"  id="bolerolofi" src="./src/audio/bolero lofi.mp3"></audio>
+                                    </div>
+                                    <div class="item_option chill">
+                                        <i class='bx bxs-coffee bx-tada'></i>
+                                        <p>Chill</p>
+                                    </div>
+                                </div>
+                                <div class="input_music">
+                                    <div id="min_volume"> <i class='bx bx-volume-low'></i></div>
+                                    <input id="testVL" oninput="testvolume()" type="range" value="50" step="0.01" min="0" max="1">
+                                    <i class='bx bxs-volume-full'></i>
+                                    <p class="testvl"></p>
+
+                                </div>
+                                <h3>Sounds</h3>
+                                <div class="sounds_option_music">
+                                    <div class="item_sounds">
+                                      
+                                        <p>Keyboard</p>
+                                        <input id="Keyboard" type="range"  value="0"  step="0.01" min="0" max="1">
+                                        <audio id="keyboard_audio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/keyboard.mp3"></audio>
+                                    </div>
+                                    <div class="item_sounds">
+                                       
+                                        <p>Summer Storm </p>
+                                         <input oninput="volume_rain()" class="summerStormvolume" id="rain" type="range" value="0" step="0.01" min="0" max="1">
+                                         <audio id="summerStormaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/rain_city.mp3"></audio>
+                                    </div>
+                                    <div class="item_sounds">
+                                        
+                                        <p>Ocean </p>
+                                        <input id="Oceean" type="range"  value="0"  step="0.01" min="0" max="1">
+                                        <audio id="oceanaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/ocean.mp3"></audio>
+                                    </div>
+                                    <p onclick="mixMode()" class="text_mix_mode">Mix Mode</p>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div onclick="templates()" class="templates">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none" class="injected-svg" data-src="/icons/new/menu-templates.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M9.66238 0V6.30259H0.602927C1.55983 3.35462 3.98825 1.09486 7.03471 0.378681C7.9006 0.175122 8.77988 0.0488953 9.66238 0Z"
+                                    fill="#363636"></path>
+                                <path
+                                    d="M11.3376 3.19319e-07V13.0184H20.7905C21.1234 11.0315 21.0596 8.99479 20.599 7.02706C19.8269 3.72823 17.2569 1.15248 13.9653 0.378681C13.0994 0.175123 12.2201 0.0488958 11.3376 3.19319e-07Z"
+                                    fill="#363636"></path>
+                                <path
+                                    d="M20.3971 14.6973H11.3376V21C12.2201 20.9511 13.0994 20.8249 13.9653 20.6213C17.0118 19.9051 19.4402 17.6454 20.3971 14.6973Z"
+                                    fill="#363636"></path>
+                                <path
+                                    d="M9.66238 21V7.98154H0.20952C-0.123394 9.96843 -0.0595734 12.0052 0.400983 13.973C1.17308 17.2718 3.74315 19.8475 7.03471 20.6213C7.9006 20.8249 8.77988 20.9511 9.66238 21Z"
+                                    fill="#363636"></path>
+                            </svg>
+                            <span>Template</span>
+                        </div>
+
+                        <div onclick="scenes()"  class="scenes">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none" class="injected-svg" data-src="/icons/new/menu-scenes.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.4421 16.2218C14.9837 16.3294 14.5205 16.4092 14.055 16.4614C13.437 18.5828 11.7223 20.2197 9.5548 20.7281C8.00927 21.0906 6.40081 21.0906 4.85527 20.7281C2.58107 20.1946 0.805357 18.4189 0.271901 16.1447C-0.0906338 14.5992 -0.0906337 12.9907 0.271901 11.4452C0.78033 9.27769 2.41719 7.56299 4.53856 6.94503C4.59077 6.47949 4.67065 6.01627 4.77818 5.55785C5.38856 2.95571 7.42033 0.923944 10.0225 0.313566C11.8048 -0.104522 13.6598 -0.104522 15.4421 0.313566C18.0443 0.923945 20.0761 2.95572 20.6864 5.55786C21.1045 7.34023 21.1045 9.19516 20.6864 10.9775C20.0761 13.5797 18.0443 15.6114 15.4421 16.2218ZM10.0225 16.2218C10.7633 16.3956 11.5167 16.4972 12.2722 16.5265C11.7138 17.8156 10.5739 18.7859 9.17613 19.1137C7.87966 19.4178 6.53041 19.4178 5.23395 19.1137C3.57288 18.7241 2.2759 17.4271 1.88626 15.7661C1.58215 14.4696 1.58215 13.1203 1.88626 11.8239C2.21413 10.4261 3.18444 9.28622 4.47353 8.72776C4.49844 9.36967 4.57549 10.0101 4.70469 10.6425C4.72755 10.7545 4.75205 10.8661 4.77818 10.9775C5.38856 13.5797 7.42033 15.6114 10.0225 16.2218Z"
+                                    fill="#363636"></path>
+                            </svg>
+                            <span>scenes</span>
+                        </div>
+
+                        <div onclick="tools()" class="tools">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18"
+                                fill="none" class="injected-svg" data-src="/icons/new/menu-study.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M20.1251 3.49991C19.6417 3.49991 19.2499 3.89174 19.2499 4.37508V12.8496H11.8876C13.4838 11.7474 15.4156 11.0998 17.4998 11.0998V1C17.4998 0.447716 17.051 -0.00531779 16.5014 0.0497994C14.1671 0.283932 12.0709 1.33016 10.5 2.90196C8.92914 1.33016 6.83274 0.283929 4.49837 0.0497985C3.94884 -0.00531729 3.49997 0.447715 3.49997 1V11.0998C5.585 11.0998 7.51616 11.7474 9.11244 12.8496H1.75009V4.37508C1.75009 3.89174 1.35826 3.49991 0.874915 3.49991C0.394006 3.49991 0 3.89469 0 4.37483V14.8748C0 15.3568 0.394006 15.75 0.874915 15.75H8.74992C8.74992 16.7173 9.53347 17.4998 10.5 17.4998C11.4665 17.4998 12.2501 16.7173 12.2501 15.75H20.1251C20.606 15.75 21 15.3568 21 14.8748V4.37483C21 3.89469 20.606 3.49991 20.1251 3.49991Z"
+                                    fill="#363636"></path>
+                            </svg>
+                            <span>Tools</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bot">
+                    <div class="control">
+                        <img src="https://app.lofi.co/static/media/previous.3b3474665d6b8d95bb081b41d67270fe.svg"alt="">
+                        <img src="https://app.lofi.co/static/media/play.18d46dd90ca12db32170bea8b2d46404.svg" alt="">
+                        <img src="https://app.lofi.co/static/media/pause.ac7490b3bef8fffb1bfd2550201f4836.svg" alt="">
+                        <img src="https://app.lofi.co/static/media/next.9551d6f2d952cb6759a725aac878ab09.svg" alt="">
+                    </div>
+
+                    <div class="audio">
+                        <audio preload="auto" id="audiochinh"  autoplay="true" loop="loop"   src="./src/audio/chill_6.mp3"></audio>
+                    </div>
+
+                    <div class="text_bot">
+                        <!-- <div class="item_text_bot">
+                            <h3>Music By Manh Cuong Entertaiment</h3>
+                            <img src="src/img/logo-white.png" width="60px" alt="">
+                        </div>
+                        <div class="item_text_bot">
+                            <h3>chúc các bạn nghe nhạc vui vẻ </h3>
+                            <img src="src/img/logo-white.png" width="60px" alt="">
+                        </div> -->
+                        <div class="item_text_box">
+                            <marquee scrolldelay="100">Mọi thắc mắc vui lòng hỏi Google <span> -/- </span> Music by Manh
+                                Cuong Entertaiment</marquee>
+                            <img src="src/img/logo-white.png" width="70px" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="fixed_content">
+
+                <div class="current_time_fixed_content">
+
+                    <div class="content_current_time">
+                        <div class="left_current_time">
+                            <h3>Have a beautiful day ! 👌 </h3>
+                            <p>It's : <span style="margin: 0px 0px 0px 30px;" class="date_of_mess"></span></p>
+                        </div>
+                        <div class="right_current_time">
+                            <h3 class="time_of_mess"></h3>
+                        </div>
+                        <h5>
+                            <marquee> “If GOD brings you to it, He will bring you through it.” ― Anonymous (Nếu Thượng
+                                đế đã soi sáng cho bạn một đích đến, ngài sẽ cùng bạn vượt qua cả chặng đường.)
+                            </marquee>
+                        </h5>
+                        <p>- Ẩn Danh -</p>
+                    </div>
+                    <i onclick="closedate()" class='bx bx-x bx-flashing bx-flip-horizontal'></i>
+                </div>
+
+                <div class="share_fixed_content">
+                    <div class="content_share_fixed">
+                        <h3>SHARE</h3>
+                        <hr>
+                        <div class="icon_share">
+                            <a href="https://www.facebook.com/cuong.maithanh.2510"><i
+                                    class='bx bxl-facebook-circle bx-tada'></i></a>
+
+                            <a href="https://www.instagram.com/mcuong_8123/"> <i
+                                    class='bx bxl-instagram-alt bx-tada'></i></a>
+                            <a href="https://twitter.com/?lang=en"><i class='bx bxl-twitter bx-tada'></i></a>
+                            <a href="https://github.com/cuongdeptraivkl"><i class='bx bxl-github bx-tada'></i></a>
+                            <a href=""> <i class='bx bxs-message-rounded-dots bx-tada'></i></a>
+                            <p>Copy the link to share your combination of music,scenery and sounds with your friends!
+                            </p>
+                        </div>
+
+                        <div class="btn_share">
+                            <p>https://cuongdeptraivkl.github.io/Lofi/</p>
+                            <i class='bx bx-copy'></i>
+                        </div>
+                    </div>
+                    <i onclick="closeShare()" class='bx bxs-x-circle bx-flip-horizontal'></i>
+                </div>
+                <div class="mixer_all">
+                  
+                    <div class="mixer_mode_fixed">
+                       
+                        <div class="text_logo_mixer">
+                            <p>Hoan Xoai Lofi</p>
+                            <p><img src="src/img/logo-white - Copy.png" width="60px" alt=""></p>
+                        </div>
+                        <div class="option_music_mixer_fixed">
+                            <div  class="item_option mixi">
+                                <i class='bx bxs-moon bx-tada bx-flip-horizontal'></i>
+                                <p> Mixi radio</p>
+                                <audio preload="auto"  autoplay="true" loop="loop"  id="mixiaudio" src="./src/audio/mixiradio2.mp3"></audio>
+                            </div>
+                            <div class="item_option">
+                                <i class='bx bxl-java bx-tada bx-flip-horizontal'></i>
+                                <audio preload="auto"  autoplay="true" loop="loop"  id="bolerolofi" src="./src/audio/bolero lofi.mp3"></audio>
+                                <p>Bolero Lofi</p>
+                            </div>
+                            <div class="item_option">
+                                <i class='bx bxs-coffee bx-tada'></i>
+                                <p>Chill</p>
+                            </div>
+                        </div>
+                        <div class="befor_sound">
+                           <h3>If you Like my project, Please donate 400 Milions VND. Thanks!</h3>
+                        </div>
+                        <h3>Sounds</h3>
+                      
+                    </div>
+                    
+                    <div class="close_mixer">
+                        <i onclick="mixMode()" class='bx bxs-x-circle'></i>
+                    </div>
+                    <div class="mix_mode_fixed">
+                        <div class="item_mixer_fixed">
+                            <div class="item_sounds">
+                                <p>Birds</p>
+                                <input  id="birdsvolume" type="range" value="0" step="0.01" min="0" max="1">
+                                <audio id="birdsaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/birds(chim_hot).mp3"></audio>
+                            </div>
+                        </div>
+                        <div class="item_mixer_fixed">
+                            <input id="trafficvolume" type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="traficaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/city_traffic(thanh_pho_on_ao).mp3"></audio>
+                            <p>Traffic</p>
+                           
+                        </div>
+                        <div class="item_mixer_fixed">
+                            <input id="eckvolume"  type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="eckaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/ech_keu.mp3"></audio>
+                            <p>Eck</p>
+                           
+                        </div>
+                        <div class="item_mixer_fixed">
+                            <input id="fanvolume"  type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="fanaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/fan.mp3"></audio>
+                            <p>Fan</p>
+                           
+                        </div>
+                        <div class="item_mixer_fixed">
+                            <input id="firevolume"  type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="fireaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/fire.mp3"></audio>
+                            <p>Fire</p>
+                           
+                        </div>
+                        <div class="item_mixer_fixed">
+                            <input id="snowvolume" type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="snowaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/river.mp3"></audio>
+                            <p>River</p>
+                           
+                        </div>
+                        <div class="item_mixer_fixed">
+                            <input id="volumewwind" type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="windaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/wind.mp3"></audio>
+                            <p>wind</p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+    <div id="SignUp">
+        <div class="sing_Up">
+            <div class="logo_text_signin">
+                <img src="src/img/logo-white.png" width="70px" alt="">
+                <h2>Nice To Meet You!</h2>
+                <h5>Sign up for free account</h5>
+            </div>
+            <div class="form">
+                <form action="" onsubmit="return validate()">
+                    <div class="form_signUp">
+                        <input id="username" type="text" placeholder="Name" required>
+                        <input id="email" type="email" placeholder="Email" required>
+                        <input id="pass" type="password" placeholder="Password" required>
+                        <input id="repass" type="password" class="repass" onclick="repass()" placeholder="repassword">
+                    </div>
+                    <p>By singning up, you agree to our</p>
+                    <p style="color: orange;">Privacy Policy & Tém of Service</p>
+                    <input type="submit" value="Sign Up">
+                    <p>Already have an account ? <span onclick="repass()" style="color: orange; cursor: pointer;">Log
+                            In</span></p>
+                </form>
+            </div>
+
+
+        </div>
+        <i class='bx bx-x bx-flashing bx-flip-horizontal' onclick="signup()"></i>
+
+    </div>
+   
+
+    <script src="src/js/main.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>
