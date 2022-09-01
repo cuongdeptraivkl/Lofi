@@ -566,6 +566,14 @@ audiochinh.pause();
 play.style.display = "none";
 stop.style.display = "block";
 }
+next.onclick= () => {
+  audiochinh.pause();
+  boleroaudio.pause();
+  }
+  prev.onclick= () => {
+    audiochinh.pause();
+  boleroaudio.pause();
+  }
 const inputVL = document.getElementById("testVL");
 inputVL.oninput = () => {
   audiomixi.volume = inputVL.value;
@@ -593,12 +601,13 @@ play.onclick= () => {
   play.style.display = "none";
   stop.style.display = "block";
 }
-play.onclick= () => {
-  boleroaudio.play();
+next.onclick= () => {
+audiochinh.pause();
+audiomixi.pause();
+}
+prev.onclick= () => {
   audiochinh.pause();
-  audiomixi.pause();
-  play.style.display = "none";
-  stop.style.display = "block";
+audiomixi.pause();
 }
 const inputVL = document.getElementById("testVL");
 inputVL.oninput = () => {
