@@ -884,11 +884,12 @@ p {
 
 input[type='file'] {
 
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: -20px;
     opacity: 0;
     cursor: pointer;
 
@@ -1043,7 +1044,6 @@ input[type='file'] {
         bottom: 13%;
         display: flex;
         transition: .3s linear;
-        overflow: hidden;
     }
     .menu_mid svg {
         margin: 0px 20px;
