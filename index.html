@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,17 +13,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="icon" href="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/295374195_781580993040406_229230968445196371_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4xmqFs2YaL0AX93SqU6&tn=D7p54ZetywhaBBwA&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8kpNXU-xrqTVlUGmdOW26IwmqyEZiMkPX_0M6DhcOg5w&oe=63148D10">
+    <link rel="icon"
+        href="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/295374195_781580993040406_229230968445196371_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4xmqFs2YaL0AX93SqU6&tn=D7p54ZetywhaBBwA&_nc_ht=scontent.fhan5-11.fna&oh=00_AT8kpNXU-xrqTVlUGmdOW26IwmqyEZiMkPX_0M6DhcOg5w&oe=63148D10">
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400&family=DynaPuff:wght@300;400&family=Inter:wght@200;600&family=Lemonada:wght@600&family=Nunito&family=Roboto:ital,wght@0,300;0,700;0,900;1,300&display=swap"
         rel="stylesheet">
     <meta charset="utf-8" />
-    <!-- <link rel="icon" href="/favicon.ico" /> -->
-    <!-- <meta name="viewport" content="width=device-width,user-scalable=no" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description"
-        content="Interact with wonderful original artworks to create a custom background music loop. Enjoy our suite of studying & time tracking tools." />
-    <link href="/static/css/main.15dbc5f7.css" rel="stylesheet"> -->
+
 </head>
 
 <body>
@@ -68,8 +63,8 @@
                     </div>
                     <div class="right_top">
                         <div id="current_time" onclick="closedate()"></div>
-                        <div id="check_toggle"   class="toggle">
-                           <i   class='bx bx-sun'></i>
+                        <div id="check_toggle" class="toggle">
+                            <i class='bx bx-sun'></i>
                         </div>
                         <div class="ads_right_top">
                             🚀<marquee> Hoan Xoai Lofi- Design By Manh Cuong</marquee>
@@ -78,11 +73,27 @@
                             <button href="" onclick="signup()">Sing Up</a>
                         </div>
                         <div class="icon_right_top">
-                            <i onclick="closeShare()" class='bx bx-share-alt'></i>
-                            <i id="btn_volume"><i class='bx bx-volume-full'></i></i>
-                            <i id="btn_full"><i class='bx bx-fullscreen'></i></i>
-                            <i id="btn_menu" class='bx bx-menu'></i>
-                            
+
+                            <div class="item_icon_right_top">
+                               <p> <i onclick="closeShare()" class='bx bx-share-alt'></i></p>
+                                <span>Share</span>
+                            </div>
+
+                            <div class="item_icon_right_top ">
+                               <p><i class='bx bx-volume-full' id="btn_volume"></i></p>
+                                <span>Volume all</span></p>
+                            </div>
+
+                            <div class="item_icon_right_top fullscreenNew">
+                               <p> <i id="btn_full" class='bx bx-fullscreen'></i></p>
+                                <span>full screen</span></p>
+                            </div>
+
+                            <div class="item_icon_right_top">
+                               <p> <i onclick="upload()" class='bx bxs-hand-up'></i></p>
+                                <span>Upload file</span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -111,15 +122,17 @@
                                     <p><img src="src/img/logo-white - Copy.png" width="60px" alt=""></p>
                                 </div>
                                 <div class="option_music_mixer_fixed">
-                                    <div  class="item_option mixi">
+                                    <div class="item_option mixi">
                                         <i class='bx bxs-moon bx-tada bx-flip-horizontal'></i>
                                         <p> Mixi radio</p>
-                                        <audio preload="auto"  autoplay="true" loop="loop"  id="mixiaudio" src="./src/audio/mixiradio2.mp3"></audio>
+                                        <audio preload="auto" autoplay="true" loop="loop" id="mixiaudio"
+                                            src="./src/audio/mixiradio2.mp3"></audio>
                                     </div>
-                                    <div  class="bolero item_option">
+                                    <div class="bolero item_option">
                                         <i class='bx bxl-java bx-tada bx-flip-horizontal'></i>
                                         <p>Bolero lofi</p>
-                                        <audio preload="auto"  autoplay="true" loop="loop"  id="bolerolofi" src="./src/audio/bolero lofi.mp3"></audio>
+                                        <audio preload="auto" autoplay="true" loop="loop" id="bolerolofi"
+                                            src="./src/audio/bolero lofi.mp3"></audio>
                                     </div>
                                     <div class="item_option chill">
                                         <i class='bx bxs-coffee bx-tada'></i>
@@ -128,34 +141,39 @@
                                 </div>
                                 <div class="input_music">
                                     <div id="min_volume"> <i class='bx bx-volume-low'></i></div>
-                                    <input id="testVL" oninput="testvolume()" type="range" value="50" step="0.01" min="0" max="1">
+                                    <input id="testVL" oninput="testvolume()" type="range" step="0.01"
+                                        min="0" max="1">
                                     <i class='bx bxs-volume-full'></i>
-                                    <p class="testvl"></p>
+                                  
 
                                 </div>
                                 <h3>Sounds</h3>
                                 <div class="sounds_option_music">
                                     <div class="item_sounds">
-                                      
+
                                         <p>Keyboard</p>
-                                        <input id="Keyboard" type="range"  value="0"  step="0.01" min="0" max="1">
-                                        <audio id="keyboard_audio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/keyboard.mp3"></audio>
+                                        <input id="Keyboard" type="range" value="0" step="0.01" min="0" max="1">
+                                        <audio id="keyboard_audio" preload="auto" autoplay="true" loop="loop"
+                                            src="./src/audio/keyboard.mp3"></audio>
                                     </div>
                                     <div class="item_sounds">
-                                       
+
                                         <p>Summer Storm </p>
-                                         <input oninput="volume_rain()" class="summerStormvolume" id="rain" type="range" value="0" step="0.01" min="0" max="1">
-                                         <audio id="summerStormaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/rain_city.mp3"></audio>
+                                        <input oninput="volume_rain()" class="summerStormvolume" id="rain" type="range"
+                                            value="0" step="0.01" min="0" max="1">
+                                        <audio id="summerStormaudio" preload="auto" autoplay="true" loop="loop"
+                                            src="./src/audio/rain_city.mp3"></audio>
                                     </div>
                                     <div class="item_sounds">
-                                        
+
                                         <p>Ocean </p>
-                                        <input id="Oceean" type="range"  value="0"  step="0.01" min="0" max="1">
-                                        <audio id="oceanaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/ocean.mp3"></audio>
+                                        <input id="Oceean" type="range" value="0" step="0.01" min="0" max="1">
+                                        <audio id="oceanaudio" preload="auto" autoplay="true" loop="loop"
+                                            src="./src/audio/ocean.mp3"></audio>
                                     </div>
                                     <p onclick="mixMode()" class="text_mix_mode">Mix Mode</p>
 
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -180,8 +198,8 @@
                             <span>Template</span>
                         </div>
 
-                        <div onclick="scenes()"  class="scenes">
-                            <svg  xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                        <div onclick="scenes()" class="scenes">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
                                 fill="none" class="injected-svg" data-src="/icons/new/menu-scenes.svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -206,14 +224,16 @@
 
                 <div class="bot">
                     <div class="control">
-                        <img src="https://app.lofi.co/static/media/previous.3b3474665d6b8d95bb081b41d67270fe.svg"alt="">
+                        <img src="https://app.lofi.co/static/media/previous.3b3474665d6b8d95bb081b41d67270fe.svg"
+                            alt="">
                         <img src="https://app.lofi.co/static/media/play.18d46dd90ca12db32170bea8b2d46404.svg" alt="">
                         <img src="https://app.lofi.co/static/media/pause.ac7490b3bef8fffb1bfd2550201f4836.svg" alt="">
                         <img src="https://app.lofi.co/static/media/next.9551d6f2d952cb6759a725aac878ab09.svg" alt="">
                     </div>
 
                     <div class="audio">
-                        <audio preload="auto" id="audiochinh"  autoplay="true" loop="loop"   src="./src/audio/chill_6.mp3"></audio>
+                        <audio preload="auto" id="audiochinh"   autoplay="true" loop="loop"
+                            src="./src/audio/chill_6.mp3"></audio>
                     </div>
 
                     <div class="text_bot">
@@ -282,22 +302,24 @@
                     <i onclick="closeShare()" class='bx bxs-x-circle bx-flip-horizontal'></i>
                 </div>
                 <div class="mixer_all">
-                  
+
                     <div class="mixer_mode_fixed">
-                       
+
                         <div class="text_logo_mixer">
                             <p>Hoan Xoai Lofi</p>
                             <p><img src="src/img/logo-white - Copy.png" width="60px" alt=""></p>
                         </div>
-                        <div class="option_music_mixer_fixed">
-                            <div  class="item_option mixi">
+                        <div class="option_music_mixer_fixed newoption">
+                            <div class="item_option mixi">
                                 <i class='bx bxs-moon bx-tada bx-flip-horizontal'></i>
                                 <p> Mixi radio</p>
-                                <audio preload="auto"  autoplay="true" loop="loop"  id="mixiaudio" src="./src/audio/mixiradio2.mp3"></audio>
+                                <audio preload="auto" autoplay="true" loop="loop" id="mixiaudio"
+                                    src="./src/audio/mixiradio2.mp3"></audio>
                             </div>
                             <div class="item_option">
                                 <i class='bx bxl-java bx-tada bx-flip-horizontal'></i>
-                                <audio preload="auto"  autoplay="true" loop="loop"  id="bolerolofi" src="./src/audio/bolero lofi.mp3"></audio>
+                                <audio preload="auto" autoplay="true" loop="loop" id="bolerolofi"
+                                    src="./src/audio/bolero lofi.mp3"></audio>
                                 <p>Bolero Lofi</p>
                             </div>
                             <div class="item_option">
@@ -306,12 +328,12 @@
                             </div>
                         </div>
                         <div class="befor_sound">
-                           <h3>If you Like my project, Please donate 400 Milions VND. Thanks!</h3>
+                            <h3>If you Like my project, Please donate 400 Milions VND. Thanks!</h3>
                         </div>
                         <h3>Sounds</h3>
-                      
+
                     </div>
-                    
+
                     <div class="close_mixer">
                         <i onclick="mixMode()" class='bx bxs-x-circle'></i>
                     </div>
@@ -319,49 +341,69 @@
                         <div class="item_mixer_fixed">
                             <div class="item_sounds">
                                 <p>Birds</p>
-                                <input  id="birdsvolume" type="range" value="0" step="0.01" min="0" max="1">
-                                <audio id="birdsaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/birds(chim_hot).mp3"></audio>
+                                <input id="birdsvolume" type="range" value="0" step="0.01" min="0" max="1">
+                                <audio id="birdsaudio" preload="auto" autoplay="true" loop="loop"
+                                    src="./src/audio/birds(chim_hot).mp3"></audio>
                             </div>
                         </div>
                         <div class="item_mixer_fixed">
                             <input id="trafficvolume" type="range" value="0" step="0.01" min="0" max="1">
-                            <audio id="traficaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/city_traffic(thanh_pho_on_ao).mp3"></audio>
+                            <audio id="traficaudio" preload="auto" autoplay="true" loop="loop"
+                                src="./src/audio/city_traffic(thanh_pho_on_ao).mp3"></audio>
                             <p>Traffic</p>
-                           
+
                         </div>
                         <div class="item_mixer_fixed">
-                            <input id="eckvolume"  type="range" value="0" step="0.01" min="0" max="1">
-                            <audio id="eckaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/ech_keu.mp3"></audio>
+                            <input id="eckvolume" type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="eckaudio" preload="auto" autoplay="true" loop="loop"
+                                src="./src/audio/ech_keu.mp3"></audio>
                             <p>Eck</p>
-                           
+
                         </div>
                         <div class="item_mixer_fixed">
-                            <input id="fanvolume"  type="range" value="0" step="0.01" min="0" max="1">
-                            <audio id="fanaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/fan.mp3"></audio>
+                            <input id="fanvolume" type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="fanaudio" preload="auto" autoplay="true" loop="loop"
+                                src="./src/audio/fan.mp3"></audio>
                             <p>Fan</p>
-                           
+
                         </div>
                         <div class="item_mixer_fixed">
-                            <input id="firevolume"  type="range" value="0" step="0.01" min="0" max="1">
-                            <audio id="fireaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/fire.mp3"></audio>
+                            <input id="firevolume" type="range" value="0" step="0.01" min="0" max="1">
+                            <audio id="fireaudio" preload="auto" autoplay="true" loop="loop"
+                                src="./src/audio/fire.mp3"></audio>
                             <p>Fire</p>
-                           
+
                         </div>
                         <div class="item_mixer_fixed">
                             <input id="snowvolume" type="range" value="0" step="0.01" min="0" max="1">
-                            <audio id="snowaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/river.mp3"></audio>
+                            <audio id="snowaudio" preload="auto" autoplay="true" loop="loop"
+                                src="./src/audio/river.mp3"></audio>
                             <p>River</p>
-                           
+
                         </div>
                         <div class="item_mixer_fixed">
                             <input id="volumewwind" type="range" value="0" step="0.01" min="0" max="1">
-                            <audio id="windaudio" preload="auto"  autoplay="true" loop="loop"   src="./src/audio/wind.mp3"></audio>
+                            <audio id="windaudio" preload="auto" autoplay="true" loop="loop"
+                                src="./src/audio/wind.mp3"></audio>
                             <p>wind</p>
-                           
+
                         </div>
                     </div>
                 </div>
-
+                <div class="content_upload_file">
+                   <div class="upload_file">
+                    <!-- <p><input type="file" id="input-file" accept="audio/*" /></p> -->
+                    <div class="wrapper">
+                        <div class="file-upload">
+                          <input id="input-file" type="file" />
+                          <i class="fa fa-arrow-up"></i>
+                          <span>Upload file</span>
+                        </div>
+                      </div>
+                    <canvas id="canvas" ></canvas>
+                   </div>
+                   <i onclick="upload()" class='bx bx-x-circle'></i>
+                </div>
             </div>
         </main>
     </div>
@@ -396,7 +438,7 @@
         <i class='bx bx-x bx-flashing bx-flip-horizontal' onclick="signup()"></i>
 
     </div>
-   
+
 
     <script src="src/js/main.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
