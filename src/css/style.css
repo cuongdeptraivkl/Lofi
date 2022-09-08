@@ -1037,12 +1037,13 @@ input[type='file'] {
         display: none;
     }
     .menu_mid{
-        right: 20%;
-        left: 20%;
+        right: 15%;
+        left: 15%;
         top: 80%;
         bottom: 13%;
         display: flex;
         transition: .3s linear;
+        overflow: hidden;
     }
     .menu_mid svg {
         margin: 0px 20px;
@@ -1136,6 +1137,17 @@ input[type='file'] {
         top: 5%;
         left: 7%;
         
+    }
+    .content_upload_file {
+        width: auto;
+        position: fixed;
+        top: 36%;
+        background-color: #000;
+        left: 2%;
+        right: 2%;
+        border-radius: 20px 20px 20px 20px;
+        padding: 20px;
+        z-index: 0;
     }
     
 }
